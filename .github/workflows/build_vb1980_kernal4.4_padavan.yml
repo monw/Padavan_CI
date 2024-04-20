@@ -25,7 +25,7 @@ on:
         - JCQ_Q10Pro
         - JCQ_Q11Pro
         - JCG_Y2
-        - JDCloud_Luban
+        - RE-CP-02
         - JDCloud_1
         - Phicomm_K2P-NANO
         - Phicomm_K2P-USB
@@ -80,13 +80,13 @@ on:
         description: 'upload firmware to anonfiles'
         default: 'false'
 env:
-  REPOSITORY_URL: https://github.com/vb1980/padavan-4.4.git
+  REPOSITORY_URL: https://github.com/monw/padavan-4.4.git
   WORK_PATH: /opt/padavan-4.4
   DEFAULT_FILE: ./user/shared/defaults.h
   DICT_FILE: ./user/www/dict/CN.dict
   TIME_ZONE: Asia/Shanghai
   FIRMWARE_DATEPREFIX: $(date +"%Y%m%d")
-  FIRMWARE_AUTHOR: vb1980
+  FIRMWARE_AUTHOR: monw
   FIRMWARE_PATH: /opt/firmwares
 jobs:
   build:
@@ -156,8 +156,8 @@ jobs:
             "JCG_Y2": {
               "model": "JCG-Y2"
             },
-            "JDCloud_Luban": {
-              "model": "JDCLOUD-RE-CP-02"
+            "RE-CP-02": {
+              "model": "RE-CP-02"
             },
             "JDCloud_1": {
               "model": "JDCLOUD-RE-SP-01B"
