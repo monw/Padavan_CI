@@ -80,7 +80,7 @@ on:
         description: 'upload firmware to anonfiles'
         default: 'false'
 env:
-  REPOSITORY_URL: https://github.com/monw/padavan-4.4.git
+  REPOSITORY_URL: https://github.com/monw/padavan.git
   WORK_PATH: /opt/padavan-4.4
   DEFAULT_FILE: ./user/shared/defaults.h
   DICT_FILE: ./user/www/dict/CN.dict
