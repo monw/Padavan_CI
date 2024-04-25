@@ -62,7 +62,7 @@ on:
       plugins:
         description: 'json format string of include configs'
         required: true
-        default: '{"vpnsvr":"n","vpncli":"n","vpncmd":"n","ss":"n","v2ray":"n","xray":"n","trojan":"n","ssobfs":"n","dnsforwarder":"n","adbyby":"n","adguardhome":"n","smartdns":"n","aliddns":"n","zerotier":"n","ddnsto":"n","wireguard":"n","frpc":"n","aldrive":"n","sqm":"y","mentohust":"n","scutclient":"n","njitclient":"n","minieap":"n","dogcom":"n"}'
+        default: '{"vpnsvr":"n","vpncli":"n","vpncmd":"n","ss":"n","v2ray":"n","xray":"n","trojan":"n","ssobfs":"n","dnsforwarder":"n","adbyby":"n","adguardhome":"n","smartdns":"n","aliddns":"n","zerotier":"y","ddnsto":"n","wireguard":"n","frpc":"n","aldrive":"n","sqm":"y","mentohust":"n","scutclient":"n","njitclient":"n","minieap":"n","dogcom":"n"}'
       usexraymin:
         type: boolean
         description: 'use streamlined xray'
@@ -70,17 +70,17 @@ on:
       customization:
         description: 'json format string of customized configs'
         required: true
-        default: '{"rainbowui":"n","specializedlogo":"n","changebrandlogo":"n","lanip":"192.168.2.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"","wifi5gssid":"","wifi2gpsk":"","wifi5gpsk":""}'
+        default: '{"rainbowui":"n","specializedlogo":"y","changebrandlogo":"y","lanip":"192.168.2.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"","wifi5gssid":"","wifi2gpsk":"","wifi5gpsk":""}'
       firmwarever:
         description: 'firmware''s version'
         required: true
-        default: '20240420'
+        default: '20240425'
       uploadanon:
         type: boolean
         description: 'upload firmware to anonfiles'
         default: 'false'
 env:
-  REPOSITORY_URL: https://github.com/monw/padavan-4.4.git
+  REPOSITORY_URL: https://github.com/monw/padavan.git
   WORK_PATH: /opt/padavan-4.4
   DEFAULT_FILE: ./user/shared/defaults.h
   DICT_FILE: ./user/www/dict/CN.dict
@@ -281,7 +281,7 @@ jobs:
       run: |
         git clone --depth=1 $REPOSITORY_URL $WORK_PATH
         cd $WORK_PATH
-        #sed -i '/cp -f/d' Makefile
+        sed -i '/cp -f/d' Makefile
     - name: Extract toolchain
       run: |
         cp -f toolchain/mipsel-linux-uclibc-gcc10.tar.xz $WORK_PATH
