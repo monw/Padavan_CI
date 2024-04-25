@@ -281,7 +281,7 @@ jobs:
       run: |
         git clone --depth=1 $REPOSITORY_URL $WORK_PATH
         cd $WORK_PATH
-        sed -i '/cp -f/d' Makefile
+        #sed -i '/cp -f/d' Makefile
     - name: Extract toolchain
       run: |
         cp -f toolchain/mipsel-linux-uclibc-gcc10.tar.xz $WORK_PATH
