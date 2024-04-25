@@ -70,7 +70,7 @@ on:
       customization:
         description: 'json format string of customized configs'
         required: true
-        default: '{"rainbowui":"y","specializedlogo":"n","changebrandlogo":"n","lanip":"192.168.2.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"","wifi5gssid":"","wifi2gpsk":"","wifi5gpsk":""}'
+        default: '{"rainbowui":"n","specializedlogo":"n","changebrandlogo":"n","lanip":"192.168.2.1","signaccount":"admin","signpassword":"admin","wifi2gssid":"","wifi5gssid":"","wifi2gpsk":"","wifi5gpsk":""}'
       firmwarever:
         description: 'firmware''s version'
         required: true
@@ -80,7 +80,7 @@ on:
         description: 'upload firmware to anonfiles'
         default: 'false'
 env:
-  REPOSITORY_URL: https://github.com/monw/padavan.git
+  REPOSITORY_URL: https://github.com/monw/padavan-4.4.git
   WORK_PATH: /opt/padavan-4.4
   DEFAULT_FILE: ./user/shared/defaults.h
   DICT_FILE: ./user/www/dict/CN.dict
