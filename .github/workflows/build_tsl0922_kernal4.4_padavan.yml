@@ -37,7 +37,8 @@ on:
         - Xiaoyu_C3
         - Xiaoyu_C5
         - ZTE_E8820S
-        default: Xiaoyu_C1
+        - QM-B1
+        default: QM-B1
       plugins:
         description: 'json format string of include configs'
         required: true
@@ -45,9 +46,9 @@ on:
       firmwarever:
         description: 'firmware''s version'
         required: true
-        default: '20240209'
+        default: '20240425'
 env:
-  REPOSITORY_URL: https://github.com/tsl0922/padavan.git
+  REPOSITORY_URL: https://github.com/monw/padavan.git
   WORK_PATH: /opt/padavan-4.4
   TIME_ZONE: Asia/Shanghai
   FIRMWARE_DATEPREFIX: $(date +"%Y%m%d")
@@ -157,6 +158,9 @@ jobs:
             "ZTE_E8820S": {
               "model": "ZTE-E8820S"
             },
+            "QM-B1": {
+              "model": "QM-B1"
+              },
             ".*": {
               "model": "K2P"
             }
